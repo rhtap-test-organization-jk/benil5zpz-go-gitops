@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: benil5zpz-go-gitops
+  description: This is GitOps manifest for benil5zpz-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: benil5zpz-go
+    backstage.io/kubernetes-id: benil5zpz-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: benil5zpz-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:benil5zpz-go
